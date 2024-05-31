@@ -1,5 +1,29 @@
 ﻿//This is just a readme.md file and it is not part of the assessment//
 # Nodejs-Intermediate-task-stage-0 #
+Memory App with Basic Authentication
+This Node.js application allows users to sign in, create, and view memories. It utilizes basic authentication and stores data in a JSON file.
+
+Requirements:
+Node.js
+
+Features:
+User login with basic authentication (username: 'admin', password: 'password')
+Create new memories
+View all memories
+
+API Endpoints:
+GET /memories: Retrieves all memories from the JSON file.
+POST /memories: Creates a new memory (requires authentication and valid memory data in the request body).
+Authentication:
+
+The application uses basic authentication with username: 'admin' and password: 'password'. You need to provide these credentials in the request headers to access the API endpoints.
+
+Memory Format:
+Memories are stored in a JSON file named memories.json. Each memory object has the following properties:
+id: A randomly generated string as the unique identifier.
+content: The actual content of the memory (string).
+
+
 This task includes the following instructions 
 1. Create an app that users can sign in and post memories
 2. Use only NodeJs with no external packages
