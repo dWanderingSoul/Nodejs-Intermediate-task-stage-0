@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const url = require('url'); 
 
 // Define the memory data file path
 const memoryFilePath = 'memories.json';
@@ -37,10 +38,10 @@ function handleAuthError(res) {
   res.writeHead(401, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({ message: 'Authentication required' }));
 }
+const authenticate = require('./auth.js');
 
 // Function to handle requests and responses
 function handleRequest(req, res) {
-  // Authenticate using the middleware function from auth.js
   if (!authenticate(req)) {
     handleAuthError(res);
     return;
